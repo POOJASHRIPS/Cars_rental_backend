@@ -43,23 +43,22 @@ namespace Car_rental.Interface.CarServices
 
 
 
-        public async Task<bool> CarAvailability(CarAvailabilityRegister availability)
+        public async Task<bool> CarAvailability(CarAvailabilityRegister carAvailabilityRegister)
         {
+
 
 
             var Availability = new CarAvailability
             {
-                OwnerId = availability.OwnerId,
-                CarId = availability.CarId,
-                IsAvailable = availability.IsAvailable,
-                CarRegisterNumber = availability.CarRegisterNumber
+                OwnerId = carAvailabilityRegister.OwnerId,
+                CarId = carAvailabilityRegister.CarId,
+                IsAvailable = carAvailabilityRegister.IsAvailable,
+                CarRegisterNumber = carAvailabilityRegister.CarRegisterNumber
                 
 
             };
 
-
-
-            _context.carsAvailability.Add(availability);
+            _context.carsAvailability.Add(Availability);
             await _context.SaveChangesAsync();
             return true;
 
@@ -249,6 +248,7 @@ namespace Car_rental.Interface.CarServices
 
             return false;
         }
+
 
         //end
     }

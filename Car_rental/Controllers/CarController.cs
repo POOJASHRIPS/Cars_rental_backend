@@ -14,12 +14,7 @@ namespace Car_rental.Controllers
             _carservices = carservices;
         }
 
-        [HttpPost("Register")]
-        public async Task<IActionResult> Register(UserRegistration signup)
-        {
-            return Ok(await _carservices.Register(signup));
-
-        }
+       
 
         [HttpGet("GetAllCars")]
         public async Task<IActionResult> GetAllCars()
@@ -31,31 +26,8 @@ namespace Car_rental.Controllers
             return Ok(cars);
         }
 
-        [HttpPost("OwnerRegister")]
-        public async Task<IActionResult> OwnerRegister(OwnerRegistration owner)
-        {
-            return Ok(await _carservices.OwnerRegister(owner));
-
-        }
 
 
-        [HttpPost("Login")]
-        public async Task<IActionResult> Login(Login login)
-        {
-
-            return Ok(await _carservices.Login(login));
-
-
-        }
-
-        [HttpPost("Ownerlogin")]
-        public async Task<IActionResult> Ownerlogin(Login ownerlogin)
-        {
-
-            return Ok(await _carservices.Ownerlogin(ownerlogin));
-
-
-        }
 
 
         [HttpPost("CarRegister")]
@@ -65,10 +37,11 @@ namespace Car_rental.Controllers
 
         }
 
-        [HttpPost("CarAvailabilityRegister")]
 
-        public async Task<IActionResult> CarAvailability(CarAvailability carAvailabilityRegister)
+        [HttpPost("CarAvailabilityRegisters")]
+        public async Task<IActionResult> CarAvailability(CarAvailabilityRegister carAvailabilityRegister)
         {
+            // Update the method call to pass the correct argument type
             return Ok(await _carservices.CarAvailability(carAvailabilityRegister));
         }
 
