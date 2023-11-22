@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="./signup styles.css">
+</head>
+
+<body>
+    <!-- <header>
+        <div class="container">
+          <h1>Car Rental</h1><br>
+          <nav>
+            <ul class="align">
+              <li><a href="http://127.0.0.1:5500/home.html#">Home</a></li>
+              <li><a href="#">Rent Car</a></li>
+              <li><a href="http://127.0.0.1:5500/login.html">Earn with a Car</a></li>
+              <li><a href="http://127.0.0.1:5500/login.html">Login/Signup</a></li> <br>
+            </ul>
+          </nav>
+        </div>
+      </header> -->
+    <div class="container">
+        <div class="toggle-container">
+            <label class="toggle-label">
+                <input type="checkbox" id="loginToggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <div class="switch-containerc" id="switch-idc">
+                <p><br>Sign up as Car Owner</p>
+            </div>
+            <div class="switch-containero" id="switch-ido">
+                <p><br>Sign up as Customer</p>
+            </div>
+        </div>
+
+        <div class="form-container" id="customer-form">
+            <h2>Customer Sign Up</h2>
+            <form>
+                <label for="customername">Name:</label>
+                <input type="text" id="customername" name="customername" required>
+
+                <label for="customerphonenumber">Phone Number:</label>
+                <input type="text" id="customerphonenumber" name="customerphonenumber" required>
+
+                <label for="customerDL">Driving License number:</label>
+                <input type="text" id="customerDL" name="customerDL" required>
+
+                <label for="customermailID">E-mail ID:</label>
+                <input type="text" id="customermailID" name="customermailID" required>
+
+                <label for="customerPassword">Password:</label>
+                <input type="password" id="customerPassword" name="customerPassword" required>
+
+                <button type="submit">Sign up</button>
+            </form>
+
+            <p class="signup-link">Already have an account? <a href="http://127.0.0.1:5500/login.html">Login</a></p>
+            <!-- <p class="forgot-password">Forgot password? <a href="#">Forgot password</a></p> -->
+        </div>
+
+        <div class="form-container" id="car-owner-form">
+            <h2>Car Owner Sign Up</h2>
+            <form>
+                <label for="carOwnerUsername">Username:</label>
+                <input type="text" id="carOwnerUsername" name="carOwnerUsername" required>
+
+                <label for="carOwnernumber">Phone Number:</label>
+                <input type="text" id="carOwnernumber" name="carOwnernumber" required>
+
+                <label for="carOwnercarnumber">Car number:</label>
+                <input type="text" id="carOwnercarnumber" name="carOwnercarnumber" required>
+
+                <label for="carOwnercartype">Car number:</label>
+                <input type="text" id="carOwnercartype" name="carOwnercartype" required>
+
+                <label for="carOwnermailID">E-mail ID:</label>
+                <input type="text" id="carOwnermailID" name="carOwnermailID" required>
+
+                <label for="carOwnerPassword">Password:</label>
+                <input type="password" id="carOwnerPassword" name="carOwnerPassword" required>
+
+                <button type="submit">Sign up</button>
+            </form>
+
+            <p class="signup-link">Already have an account? <a href="http://127.0.0.1:5500/login.html">Login</a></p>
+            <!-- <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
+            <p class="forgot-password">Forgot password? <a href="#">Forgot password</a></p> -->
+        </div>
+    </div>
+
+    <script src="./signup script.js"></script>
+</body>
+
+</html> 
