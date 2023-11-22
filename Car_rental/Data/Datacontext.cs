@@ -17,6 +17,14 @@ namespace Car_rental.Data
         }
         public DbSet<Users> Signups { get; set; }
 
+        public DbSet<Cars> Cars { get; set; }
+
+        public DbSet<Owner> owners { get; set; }
+
+        public DbSet<CarAvailability> carsAvailability { get; set; }
+
+        public DbSet<Booking> bookings { get; set; }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<BaseAuditEntity>())

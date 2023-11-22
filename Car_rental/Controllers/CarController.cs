@@ -20,8 +20,80 @@ namespace Car_rental.Controllers
             return Ok(await _carservices.Register(signup));
 
         }
-       
-        
 
+        [HttpGet("GetAllCars")]
+        public async Task<IActionResult> GetAllCars()
+        {
+            var cars = new List<Cars>
+            {
+                new Cars { Id = 1,}
+            };
+            return Ok(cars);
+        }
+
+        [HttpPost("OwnerRegister")]
+        public async Task<IActionResult> OwnerRegister(OwnerRegistration owner)
+        {
+            return Ok(await _carservices.OwnerRegister(owner));
+
+        }
+
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login(Login login)
+        {
+
+            return Ok(await _carservices.Login(login));
+
+
+        }
+
+        [HttpPost("Ownerlogin")]
+        public async Task<IActionResult> Ownerlogin(Login ownerlogin)
+        {
+
+            return Ok(await _carservices.Ownerlogin(ownerlogin));
+
+
+        }
+
+
+        [HttpPost("CarRegister")]
+        public async Task<IActionResult> Cars(CarRegistration carRegistration)
+        {
+            return Ok(await _carservices.Cars(carRegistration));
+
+        }
+
+        [HttpPost("CarAvailabilityRegister")]
+
+        public async Task<IActionResult> CarAvailability(CarAvailability carAvailabilityRegister)
+        {
+            return Ok(await _carservices.CarAvailability(carAvailabilityRegister));
+        }
+
+        //start
+        [HttpPost("CheckAvailability")]
+        public async Task<IActionResult> CheckAvailability(int carId)
+        {
+            var isAvailable = await _carservices.CheckCarAvailability(carId);
+            return Ok(new { IsAvailable = isAvailable });
+        }
+
+        [HttpPost("BookCar")]
+        public async Task<IActionResult> BookCar(int carId, int userId)
+        {
+            var result = await _carservices.BookCar(carId, userId);
+            return Ok(new { Success = result });
+        }
+
+        [HttpPost("CancelBooking")]
+        public async Task<IActionResult> CancelBooking(int bookingId)
+        {
+            var result = await _carservices.CancelBooking(bookingId);
+            return Ok(new { Success = result });
+        }
+
+        //stop
     }
 }

@@ -4,6 +4,7 @@ using Car_rental.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Car_rental.Migrations
 {
     [DbContext(typeof(Datacontext))]
-    partial class DatacontextModelSnapshot : ModelSnapshot
+    [Migration("20231121062949_dbset3")]
+    partial class dbset3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,11 +55,14 @@ namespace Car_rental.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("UsersId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CarAvailabilityId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UsersId");
 
                     b.ToTable("bookings");
                 });
@@ -70,10 +75,17 @@ namespace Car_rental.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Available")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CarId")
                         .HasColumnType("int");
 
                     b.Property<int>("CarRegisterNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarsId")
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedBy")
@@ -82,9 +94,6 @@ namespace Car_rental.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("bit");
 
                     b.Property<string>("LastUpdatedBy")
                         .IsRequired()
@@ -98,7 +107,7 @@ namespace Car_rental.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarId");
+                    b.HasIndex("CarsId");
 
                     b.HasIndex("OwnerId");
 
@@ -239,22 +248,22 @@ namespace Car_rental.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Car_rental.Model.Entities.Users", "User")
+                    b.HasOne("Car_rental.Model.Entities.Users", "Users")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("CarAvailability");
 
-                    b.Navigation("User");
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Car_rental.Model.Entities.CarAvailability", b =>
                 {
-                    b.HasOne("Car_rental.Model.Entities.Cars", "Car")
+                    b.HasOne("Car_rental.Model.Entities.Cars", "Cars")
                         .WithMany()
-                        .HasForeignKey("CarId")
+                        .HasForeignKey("CarsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -264,7 +273,7 @@ namespace Car_rental.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Car");
+                    b.Navigation("Cars");
 
                     b.Navigation("Owner");
                 });

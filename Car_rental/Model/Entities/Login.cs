@@ -1,0 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Car_rental.Model.Entities
+{
+    public class Login
+    {
+        public string email { get; set; }
+        public string password { get; set; }
+
+
+    }
+}
