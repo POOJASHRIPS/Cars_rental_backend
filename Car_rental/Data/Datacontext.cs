@@ -13,8 +13,9 @@ namespace Car_rental.Data
         {
             //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CarssRecord;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
             optionsBuilder.UseSqlServer("Server=PSRINIVASAMUR04\\SQLEXPRESS;Database=Car_rental;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True;");
-
+            //gitclonetry
         }
+
         public DbSet<Users> Signups { get; set; }
 
         public DbSet<Cars> Cars { get; set; }
