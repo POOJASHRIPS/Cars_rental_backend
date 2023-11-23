@@ -14,15 +14,12 @@ namespace Car_rental.Controllers
             _carservices = carservices;
         }
 
-       
+
 
         [HttpGet("GetAllCars")]
         public async Task<IActionResult> GetAllCars()
         {
-            var cars = new List<Cars>
-            {
-                new Cars { Id = 1,}
-            };
+            var cars = await _carservices.GetAllCars();
             return Ok(cars);
         }
 

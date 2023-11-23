@@ -161,9 +161,10 @@ namespace Car_rental.Interface.CarServices
         //    throw new NotImplementedException();
         //}
 
-        public Task GetAllCars()
+        public async Task<List<Cars>> GetAllCars()
         {
-            throw new NotImplementedException();
+            var cars = await _context.Cars.ToListAsync();
+            return cars;
         }
 
         // public async Task<bool> CheckCarAvailability(int carId)

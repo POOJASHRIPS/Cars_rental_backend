@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     switchidc.style.display = "none";
     switchido.style.display = "block";
     carOwnerForm.style.display = "block";
-  };
+    };
 
   const handleToggleChange = () => {
     if (loginToggle.checked) {
