@@ -11,7 +11,7 @@ namespace Car_rental.Interface.CarServices
         Task<bool> Cars(CarRegistration carRegistration);
         Task<bool> CarAvailability(CarAvailabilityRegister carAvailabilityRegister);
 
-        Task GetAllCars();
+        Task<List<Cars>> GetAllCars();
         Task<bool> CheckCarAvailability(int carId);
         Task<bool> BookCar(int carId, int userId);
         Task<bool> CancelBooking(int bookingId);
