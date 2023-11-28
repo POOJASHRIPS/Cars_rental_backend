@@ -1,0 +1,277 @@
+/* body {
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  background-color: #ebdfec;
+  margin: 5px;
+  border-width: 10px;
+  border-color: black;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+}
+
+header {
+  background-color: #9836c9;
+  color: white;
+  padding: 1em 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+  margin: 0;
+  text-align: left;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  text-align: end;
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav li:hover {
+  text-decoration: solid;
+}
+
+section {
+  padding: 20px;
+}
+
+footer {
+  background-color: #9836c9;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.footer-details,
+.footer-contact {
+  width: 50%;
+  display: inline-block;
+}
+
+.footer-p {
+  margin: 0;
+  padding: 0;
+}
+
+.align {
+  margin-bottom: 20px;
+  justify-content: space-around;
+  text-align: end;
+}
+
+.dropdown {
+  position: flex;
+  margin: 20px 10px 20px 80px;
+}
+
+#datepicker,
+#datepicker2 {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #daa3f5;
+  border-radius: 4px;
+}
+
+.cal-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-container {
+  background-color: #daa3f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+
+.form-container::-webkit-scrollbar {
+  display: none;
+}
+
+.content-wrapper {
+  margin: 10px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+button {
+  background-color: #9836c9;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8937b2;
+  transition: background-color 0.3s;
+} */
+
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container-fluid {
+  position: relative;
+}
+
+.form-container {
+  background-color: #daa3f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  align-items: center;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  margin: 10px;
+}
+
+.form-container::-webkit-scrollbar {
+  display: none;
+}
+
+.content-wrapper {
+  margin: 10px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+h2 {
+  color: #9836c9;
+}
+
+.containercar {
+  margin: 10px;
+}
+
+.availableCars {
+  margin: 40px;
+  padding: 4%; /* Adjust the padding as needed */
+}
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.buttonsubmit {
+  background-color: #9836c9;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buttonsubmit:hover {
+  background-color: #8937b2;
+  transition: background-color 0.3s;
+}
+
+.navbar1 {
+  position: fixed;
+  width: 100%;
+  background-color: #8937b2;
+}
+
+/* Carousel Styles */
+.carousel-inner {
+  border-radius: 10px;
+  /* Rounded corners for the carousel */
+  margin: 10px;
+}
+
+.footer {
+  background-color: #9836c9;
+  color: white;
+  padding: 2em 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a :hover {
+  color:black;
+  text-decoration: underline;
+}
+
+.social-icons {
+  /* position: fixed; */
+  text-align: right;
+  bottom: 20px;
+  right: 20px;
+}
+
+.social-icons a {
+  margin-left: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
