@@ -151,15 +151,6 @@ namespace Car_rental.Interface.CarServices
 
         }
 
-        //public Task<bool> Owner(OwnerRegistration ownerRegistration)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public Task<object?> Register(OwnerRegistration owner)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         public async Task<List<Cars>> GetAllCars()
         {
@@ -167,36 +158,7 @@ namespace Car_rental.Interface.CarServices
             return cars;
         }
 
-        // public async Task<bool> CheckCarAvailability(int carId)
-        //{
-        //    var carAvailability = await _context.carsAvailability
-        //        .FirstOrDefaultAsync(c => c.CarId == carId && c.IsAvailable);
-        //    return carAvailability != null;
-        //}
-
-        //public async Task<bool> BookCar(int carId, int userId)
-        //{
-        //    var carAvailability = await _context.carsAvailability
-        //        .FirstOrDefaultAsync(c => c.CarId == carId && c.IsAvailable);
-
-        //    if (carAvailability != null)
-        //    {
-        //        carAvailability.IsAvailable = false;
-
-        //        var booking = new Booking
-        //        {
-        //            CarAvailabilityId = carAvailability.Id,
-        //            UserId = userId,
-        //            NextAvailableOn = DateTime.UtcNow.AddHours(1) // Assuming the next available time is 1 hour from now.
-        //        };
-
-        //        _context.bookings.Add(booking);
-        //        await _context.SaveChangesAsync();
-        //        return true;
-        //    }
-
-        //    return false;
-        //}
+       
         //start
         public async Task<bool> CheckCarAvailability(int carId)
         {

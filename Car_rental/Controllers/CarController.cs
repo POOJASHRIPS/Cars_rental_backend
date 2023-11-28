@@ -36,13 +36,12 @@ namespace Car_rental.Controllers
 
 
         [HttpPost("CarAvailabilityRegisters")]
-        public async Task<IActionResult> CarAvailability(CarAvailabilityRegister carAvailabilityRegister)
+        public async Task<IActionResult> CarAvailability([FromBody] CarAvailabilityRegister carAvailabilityRegister)
         {
-            // Update the method call to pass the correct argument type
             return Ok(await _carservices.CarAvailability(carAvailabilityRegister));
         }
 
-        //start
+
         [HttpPost("CheckAvailability")]
         public async Task<IActionResult> CheckAvailability(int carId)
         {
@@ -64,6 +63,6 @@ namespace Car_rental.Controllers
             return Ok(new { Success = result });
         }
 
-        //stop
+        
     }
 }
