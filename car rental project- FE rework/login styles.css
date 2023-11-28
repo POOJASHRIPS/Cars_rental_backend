@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:orange;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+.container-fluid {
+    position: relative;
+}
+
+.containerform {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: auto;
+    padding: 3%;
+    margin: 20px 40px 20px 30px;
+    top: 15%;
+    left: 20%;
+    background-color:rgba(71, 70, 70, 0.4);
+    border-radius: 10px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.toggle-label input {
+    display: none;
+}
+
+.toggle-slider {
+    position: absolute;
+    float: center;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 100px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    align-content: center;
+    height: 20px;
+    width: 20px;    
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-label input:checked+.toggle-slider:before {
+    transform: translateX(40px);
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 300px;
+}
+
+h2 {
+    color:#9836c9;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.buttonsubmit {
+    background-color: #9836c9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buttonsubmit:hover {
+    background-color: #8937b2;
+    transition: background-color 0.3s;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #9836c9;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #9836c9;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+/* Carousel Styles */
+.carousel-inner {
+    border-radius: 10px; /* Rounded corners for the carousel */
+    margin: 10px;
+}
